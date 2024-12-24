@@ -7,7 +7,7 @@
 
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" />
-  <p style="margin-top: 10px;">Fig 1. Overview of Thie System.</p>
+  <p style="margin-top: 10px;">Fig 1. Overview of ROS Hamburger System.</p>
 </div>
 
 ## 1. Hardware Setting
