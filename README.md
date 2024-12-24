@@ -7,7 +7,7 @@
 
 ## Hardware
 본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다.
-![image](https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/tree/main/image/3D_Schemetic.png)
+<img src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/tree/main/image/3D_Schemetic.png">
 Indy 10 로봇을 중심으로 하여, 관찰자 시점에서 왼쪽에는 아두이노 시스템, 오른쪽에는 패티 인식 시스템이 위차하고, 앞쪽에는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 
 
 ## Software
