@@ -115,7 +115,7 @@ pip install --upgrade google-api-python-client
 pip install --upgrade google-cloud-vision
 ```
 
-#### 2.3.4. 
+#### 2.3.4. Register json file as system variable
 JSON 계정 키가 정상적으로 다운로드 되었다면 다음과 같이 json 파일을 시스템 변수로 등록해줘야 합니다.
 ```
 setx GOOGLE_APPLICATION_CREDENTIALS (json 파일 위치)\(json 파일 이름).json
