@@ -19,9 +19,9 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였습니다.
 
 ### ROS Python Code
-우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
-**Python Source Link:** [링크 변경]
-- 7가지 파이썬 코드들
+우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.<br>
+**Python Source Link:** [링크 변경]<br>
+- 7가지 파이썬 코드들<br>
 `catkin_ws/src/indy_driver/src`
 `camera.py`
 `image_display.py`
