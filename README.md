@@ -1,5 +1,5 @@
 # Project2: Robot Operating System for Making Hamburger Model with Deep Learning
-**Course**: IAIA(Industrial AI and Automation)
+**Contents**: Project2 of IAIA(Industrial AI and Automation)
 
 **Author**: 21800226 Yunki Noh / 21900727 Garam Jin / 21900258 Hyeonho Moon 
 
