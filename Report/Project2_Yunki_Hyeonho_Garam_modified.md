@@ -568,9 +568,14 @@ rosrun indy_driver test_motion.py
 
 #### 2.3.2. **Detect the Hamburger Order using OCR Deep Learning**
 
-![OCR](https://github.com/user-attachments/assets/9988e706-19c1-4864-90f2-922fe7733b8e)
+<div align="center">
+  <img width="940" alt="OCR" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/OCR.png" /><br>
+  <p style="margin-top: 10px;">Fig 9. OCR Deep Learning System Example Picture</p>
+</div>
 
-<center><strong>Fig 9. OCR Deep Learning System Example Picture</center>		
+
+
+  
 
 ​	To start this system, we need to inform what kind of hamburger we're going to make through the camera for OCR.	
 
@@ -634,9 +639,14 @@ if __name__ == "__main__":
 
 #### 2.2.3. Detect Each Patty using Image Processing
 
-![imageprocessing](https://github.com/user-attachments/assets/f499a0c2-4376-470b-a41b-d6a5c03d8a32)
+<div align="center">
+  <img width="940" alt="imageprocessing" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/imageprocessing.png" /><br>
+  <p style="margin-top: 10px;">Fig 10. Patty Image Processing</p>
+</div>
 
-<center><strong>Fig 10. Patty Image Processing</center>		
+
+
+  
 
 ​		One of the most challenging tasks in the hamburger production process was image processing. Specifically, strong reflections from the grill and the characteristics of wide-angle cameras made accurate object detection difficult. Initially, when performing image processing against a white background, converting images to grayscale to detect objects and obtain their central coordinates was relatively straightforward. Additionally, coordinate calculations with random movement along the X and Y axes were feasible.
 
@@ -868,9 +878,13 @@ if __name__ == '__main__':
 
 ​	The overall sequence of stacking hamburger process would be unified except for the patties depending on the type of hamburger. The process would repeat the pick up and stack up process with each ingredient.
 
-<img src="Sequence.png" alt="Sequence">
+<div align="center">
+  <img width="940" alt="Sequence" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/Sequence.png" /><br>
+  <p style="margin-top: 10px;">Fig 11. Overall Process of Repeating to Pick up and Stack Each Ingredient</p>
+</div>
 
-<center><strong>Fig 11. Overall Process of Repeating to Pick up and Stack Each Ingredient</center>		      
+
+	      
 
 ​	In the case of Bulgogi Hamburger, this robot would pick up the bread and place it on the stacking position. After this, this robot would turn to the right to pick up patty. In this case, the bulgogi patty would be picked up and would be placed on bread. Then this robot would pick up and place each ingredients (tomato, lettuce, and bread) repeatedly.
 
