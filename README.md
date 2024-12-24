@@ -1,6 +1,7 @@
 # Project2: Robot Operating System for Making Hamburger Model with Deep Learning
 
 **Author**: 21800226 Yunki Noh / 21900727 Garam Jin / 21900258 Hyeonho Moon 
+
 **Date**: 2024.12.20
 
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다. 해당 프로젝트는 햄버거 자동 쌓기 시스템을 구현하기 위해 수행되었으며, Indy10과 ROS 시스템을 기반으로 하여 수행되었습니다.
