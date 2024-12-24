@@ -36,10 +36,8 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 </div>
 
 ## 2. Software
-본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였습니다.
-
 ### 2.1. Software Version
-
+본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였는데, 가장 기본이 되는 프로그램의 종류와 버전은 다음과 같습니다.
 - 우분투: Ubuntu 20.04
 
 - 파이썬: Python 3.8
