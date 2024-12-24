@@ -12,8 +12,19 @@
   <p style="margin-top: 10px;">Fig 1. 3D Schematic of ROS Hamburger System.</p>
 </div>
 
+Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 아두이노 시스템이, 오른쪽에는 이미지 프로세싱을 통한 패티 인식 시스템이 위치하고, 앞쪽의 왼쪽 부분에서는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 추가적으로 전면 중앙에서 햄버거의 각 재료가 쌓이며, 햄버거가 완성되면 종을 울린 뒤에 Indy10은 대기 상태로 되돌아갑니다. 
 
-Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 아두이노 시스템이, 오른쪽에는 이미지 프로세싱을 통한 패티 인식 시스템이 위치하고, 앞쪽의 왼쪽 부분에서는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 추가적으로 전면 중앙에서 햄버거의 각 재료가 쌓이며, 햄버거가 완성되면 종을 울린 뒤에 Indy10은 대기 상태로 되돌아갑니다.
+추가적으로 Indy10 로봇을 사용하기 위해서는 다음과 같은 과정을 수행하면 됩니다.
+
+- 로봇의 전원을 킵니다.
+- PC와 태블릿의 WiFi를 IAIA-5G로 연결합니다.
+- 로봇의 IP 주소를 확인합니다. [IP: 192.168.0.9]
+- Terminal에 아래의 코드를 통해 로봇과 연결한다.
+- 
+```
+roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
+
+```
 
 ## 2. Software
 본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였습니다.
@@ -26,7 +37,7 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 
 #### 2.1.1. Required Packages
 
-7가지 파이썬 코드들
+- 7가지 파이썬 코드들
 
 0. `catkin_ws/src/indy_driver/src`: 파일 위치로 이동<br>
 1. `camera.py`: OCR 수행을 위한 카메라 코드<br>
@@ -38,16 +49,22 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 7. `test_motion.py`<br>
 
 #### 2.1.2. Robot Setting
+
 로봇을 사용하기 위해서 다음을 수행합니다.
+
 - 로봇의 전원을 킵니다.
 - PC와 태블릿의 WiFi를 IAIA-5G로 연결합니다.
 - 로봇의 IP 주소를 확인합니다. [IP: 192.168.0.9]
 - Terminal에 아래의 코드를 통해 로봇과 연결한다.
+- 
 ```
 roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
 
 ```
+
 이것으로 로봇과의 연결을 완료하였습니다.
+
+#### 2.1.3. Robot Setting
 
 ### OCR DeepLearning 
 
