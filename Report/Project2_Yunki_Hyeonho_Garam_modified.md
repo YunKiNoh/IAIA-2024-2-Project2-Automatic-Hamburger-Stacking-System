@@ -353,7 +353,7 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 
 <div align="center">
-  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper3.png" /><br>
+  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper3.jpg" /><br>
   <p style="margin-top: 10px;">Fig 6. Turner Design</p>
 </div>
 		
