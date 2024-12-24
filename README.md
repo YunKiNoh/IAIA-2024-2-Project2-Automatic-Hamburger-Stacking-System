@@ -40,7 +40,9 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 - Software Package
 
 -- Ubuntu 20.04
+
 -- Arduino 1.8.13
+
 -- OCR Deeplearning Model
 
 
