@@ -64,13 +64,13 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 ### 2.3. 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
 이번 프로젝트는 Ubuntu 20.04에서 이루어졌기 때문에, 해당 버전에 출시되었던 Arduino IDE 1.8.13을 설치하였습니다.
 
-### 2.3.1. Download 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
+#### 2.3.1. Download 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
 우선 안정성을 확보하기 위해서 우분투 20.04 버전에 개발된 Aruidno IDE 1.8.13 파일을 다운로드 해줍니다.
 ```
 $ sudo wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
 ```
 
-### 2.3.2. Install 'Aruidno IDE 1.8.13'
+#### 2.3.2. Install 'Aruidno IDE 1.8.13'
 그러고 나서 해당 파일을 압축해제 한 뒤에
 ```
 $ tar -xf arduino-1.8.13-linux64.tar.xz
@@ -84,7 +84,7 @@ $ cd arduino-1.8.13
 $ sudo ./install.sh
 ```
 
-### 2.3.3. Authorize
+#### 2.3.3. Authorize
 처음 아두이노를 설치하면 권한을 부여하여야 포트에 연결할 수 있기 때문에, 다음과 같이 아두이노에 대한 권한을 부여해줍니다.
 ```
 $ cd arduino-1.8.13
