@@ -79,7 +79,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 
 우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
 
-- Python Source Link: [링크 변경]
+- Python Source Link: [[ROS Python Code](https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/tree/main/Software/ROS)]
 
 - 7가지 파이썬 코드들
 
