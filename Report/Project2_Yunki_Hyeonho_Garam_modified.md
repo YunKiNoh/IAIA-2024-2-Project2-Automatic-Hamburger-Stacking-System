@@ -22,9 +22,10 @@
 
 ### 1.1. Background
 
-<img width="940" alt="3D_Schemetic" src="https://github.com/user-attachments/assets/a1a60961-12a2-42cb-a3e0-9ee3b040b1f1" />
-
-<center><strong>Fig 1. 3D Schematic of ROS Hamburger System</center>
+<div align="center">
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
+  <p style="margin-top: 10px;">Fig 1. Overview of ROS Hamburger System</p>
+</div>
 
 ​	The food tech market is growing quite fast. Especially in the hamburger market, the market size has been expanded almost to about 5 trillion won. In the previous method, almost hamburger robot system was for the cooking patties of hamburger. However, if the process of stacking each ingredients of hamburger can be performed automatically, making hamburger would be performed more efficiently. In this reason, we built up overall automatic stacking system for hamburger in this project. 
 
