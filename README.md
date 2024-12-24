@@ -6,7 +6,7 @@
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다.
 
 ## 1. Hardware
-### 1.1. Overall hardware setting
+### 1.1. Overall Hardware Setting
 본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다.
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" />
