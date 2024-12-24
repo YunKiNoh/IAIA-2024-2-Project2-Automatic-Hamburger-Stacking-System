@@ -23,8 +23,8 @@
 ### 1.1. Background
 
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
-  <p style="margin-top: 10px;">Fig 1. Overview of ROS Hamburger System</p>
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" /><br>
+  <p style="margin-top: 10px;">Fig 1. 3D Schematic of ROS Hamburger System</p>
 </div>
 
 ​	The food tech market is growing quite fast. Especially in the hamburger market, the market size has been expanded almost to about 5 trillion won. In the previous method, almost hamburger robot system was for the cooking patties of hamburger. However, if the process of stacking each ingredients of hamburger can be performed automatically, making hamburger would be performed more efficiently. In this reason, we built up overall automatic stacking system for hamburger in this project. 
@@ -35,9 +35,10 @@
 
 ​	In this system, three types of burger would be stacked automatically: Bulgogi Burger, Cheese Burger, and Shrimp Burger. To recognize the types of burger, we used OCR(Optimal Character Recognition) deep learning model. If someone want to order Bulgogi Burger, they need to pick down the OCR text card of 'Bulgogi Burger' under the camera 1. After 15 seconds of detecting 'Bulgogi Burger' from OCR model, Indy 10 start to pick up each ingredients (bread, bulgogi patty, Lettuce, tomato, bread) and stack up on the pick up table. After finishing stacking overall ingredients of hamburger, this robot would ring the bell.
 
-<img src="https://github.com/user-attachments/assets/5399c05a-68d2-4e18-b4f8-8b3c548fae08" alt="overview" style="zoom:50%;" />
-
-<center><strong>Fig 2. ROS System Set-Up Environment</center>
+<div align="center">
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
+  <p style="margin-top: 10px;">Fig 2. ROS System Set-Up Environment</p>
+</div>
 
 
 
@@ -294,9 +295,11 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 #### 2.2.2. **ROS Nodes**
 
-<img width="697" alt="Node" src="https://github.com/user-attachments/assets/dddac1c0-4ec6-455a-81ae-6b41f2ab6d85" style="zoom:150%;" />
-
-<center><strong>Fig 3. Diagram of ROS Process</center>	
+<div align="center">
+  <img width="940" alt="Diagram of ROS Process" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/Node.png" /><br>
+  <p style="margin-top: 10px;">Fig 2. ROS System Set-Up Environment</p>
+</div>
+	
 
 ​	The build system described above can be visually represented as shown in the diagram. As mentioned earlier, information is received through two camera nodes. Each camera publishes information to a display node that presents it to the user. The patty information is published to the Image Processing node, while the user’s order information is published to the Classification node.
 
