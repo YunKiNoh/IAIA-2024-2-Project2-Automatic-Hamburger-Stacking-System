@@ -25,14 +25,15 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 **Python Source Link:** [링크 변경]
 
 7가지 파이썬 코드들
+
 `catkin_ws/src/indy_driver/src`<br>
-`camera.py`<br>
-`image_display.py`<br>
-`image_processing.py`<br>
-`test_ocr_video.py`<br>
-`image_display_ocr.py`<br>
-`ham_classifier.py`<br>
-`test_motion.py`<br>
+1. `camera.py`<br>
+2. `image_display.py`<br>
+3. `image_processing.py`<br>
+4. `test_ocr_video.py`<br>
+5. `image_display_ocr.py`<br>
+6. `ham_classifier.py`<br>
+7. `test_motion.py`<br>
 
 ### OCR DeepLearning 
 
