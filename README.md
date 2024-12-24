@@ -6,6 +6,7 @@
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다.
 
 ## 1. Hardware
+### 1.1. Overall hardware setting
 본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다.
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" />
@@ -14,7 +15,7 @@
 
 Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 아두이노 시스템이, 오른쪽에는 이미지 프로세싱을 통한 패티 인식 시스템이 위치하고, 앞쪽의 왼쪽 부분에서는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 추가적으로 전면 중앙에서 햄버거의 각 재료가 쌓이며, 햄버거가 완성되면 종을 울린 뒤에 Indy10은 대기 상태로 되돌아갑니다. 이때 Indy10 로봇은 제시되어 있는 배치 속에서 햄버거 쌓기를 수행하게 되어 있으므로, 본 프로젝트를 다시 수행하기 위해서는 제시되어 있는 환경을 구축한 뒤에 미세한 위치를 조정하면 됩니다. 
 
-### 1.1. Indy10 Robot Setting
+### 1.2. Indy10 Robot Setting
 
 본 프로젝트를 본격적으로 수행하기에 앞서, Indy10 로봇을 사용하기 위해서는 다음과 같은 과정을 수행하면 됩니다.
 
@@ -26,7 +27,7 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
 ```
 
-### 1.2. Conveyor Belt Setting
+### 1.3. Conveyor Belt Setting
 
 이번 프로젝트에서는 햄버거의 각 재료를 자동으로 Indy10 로봇 앞으로 옮겨놓기 위해서 아두이노를 통해 컨베이어 벨트를 작동시켰습니다. 특히, 초음파 센서를 통해 재료가 로봇팔 앞에 도착했는지 여부에 따라 컨베이어 벨트의 작동을 구분지었고, 추가적으로 스태퍼 모터를 통해 뒤집개가 재료를 잘 옮길 수 있도록 칸막이를 설치하였습니다. 해당 Conveyor Belt 시스템은 총 컨베이어 벨트를 위한 스태퍼 모터1, 칸막이를 위한 스태퍼 모터2, 초음파 센서, 그리고 해당 센서들을 통합 작동시키기 위한 Arduino Uno R3 보드가 사용되었습니다. 각 센서들은 다음과 같이 연결하여 구동시키면 됩니다.
 <div align="center">
