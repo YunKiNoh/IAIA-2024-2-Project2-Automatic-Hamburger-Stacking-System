@@ -24,7 +24,6 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 - Terminal에 아래의 코드를 통해 로봇과 연결한다.
 ```
 roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
-
 ```
 
 ### 1.2. Arduino Setting
