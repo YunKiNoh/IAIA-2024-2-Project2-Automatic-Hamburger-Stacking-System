@@ -36,7 +36,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 </div>
 
 ## 2. Software
-### 2.1. Software Version
+### 2.1. Overall Software Environment
 본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였는데, 가장 기본이 되는 프로그램의 종류와 버전은 다음과 같습니다.
 - 우분투: Ubuntu 20.04
 
@@ -47,13 +47,13 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 - 딥러닝: OCR Deeplearning Model
 
 
-### 2.1. ROS Python Code
+### 2.2. ROS Python Code
 
 우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
 
 - Python Source Link: [링크 변경]
 
-#### 2.1.1. Required Python Packages
+#### 2.2.1. Required Python Packages
 
 - 7가지 파이썬 코드들
 
@@ -66,36 +66,17 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 6. `ham_classifier.py`<br>
 7. `test_motion.py`<br>
 
-#### 2.1.2. Robot Setting
-
-로봇을 사용하기 위해서 다음을 수행합니다.
-
-- 로봇의 전원을 킵니다.
-- PC와 태블릿의 WiFi를 IAIA-5G로 연결합니다.
-- 로봇의 IP 주소를 확인합니다. [IP: 192.168.0.9]
-- Terminal에 아래의 코드를 통해 로봇과 연결한다.
-- 
-```
-roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
-```
-
-이것으로 로봇과의 연결을 완료하였습니다.
-
-#### 2.1.3. Robot Setting
-
-### OCR DeepLearning 
-
-### Arduino
+#### 2.2.2. 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
 이번 프로젝트는 Ubuntu 20.04에서 이루어졌기 때문에, 해당 버전에 출시되었던 Arduino IDE 1.8.13을 설치하였습니다.
 
-#### Download 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
+- Download 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
 우선 안정성을 확보하기 위해서 우분투 20.04 버전에 개발된 Aruidno IDE 1.8.13 파일을 다운로드 해줍니다.
 ```
 $ sudo wget https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz
 ```
 
-#### Install 'Aruidno IDE 1.8.13'
-그러고 나서 해당 파일을 압축해제 한 뒤에, 
+- Install 'Aruidno IDE 1.8.13'
+그러고 나서 해당 파일을 압축해제 한 뒤에
 ```
 $ tar -xf arduino-1.8.13-linux64.tar.xz
 ```
@@ -108,7 +89,7 @@ $ cd arduino-1.8.13
 $ sudo ./install.sh
 ```
 
-#### Authorize
+- Authorize
 처음 아두이노를 설치하면 권한을 부여하여야 포트에 연결할 수 있기 때문에, 다음과 같이 아두이노에 대한 권한을 부여해줍니다.
 ```
 $ cd arduino-1.8.13
