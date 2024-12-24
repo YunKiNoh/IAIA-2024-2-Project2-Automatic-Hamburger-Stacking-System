@@ -86,7 +86,6 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 
 - 7가지 파이썬 코드들
 
-0. `catkin_ws/src/indy_driver/src`: 파일 위치로 이동<br>
 1. `camera.py`: OCR 수행을 위한 카메라 코드<br>
 2. `image_display.py`:<br>
 3. `image_processing.py`<br>
