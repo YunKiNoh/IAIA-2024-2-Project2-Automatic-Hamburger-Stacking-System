@@ -10,6 +10,7 @@
 <p align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" />
 </p>
+<center><strong>Fig 1. 3D Schematic of ROS Hamburger System</strong></center>
 
 Indy 10 로봇을 중심으로 하여, 관찰자 시점에서 왼쪽에는 아두이노 시스템, 오른쪽에는 패티 인식 시스템이 위차하고, 앞쪽에는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 
 
