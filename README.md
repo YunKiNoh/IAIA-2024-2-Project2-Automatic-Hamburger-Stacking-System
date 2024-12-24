@@ -6,7 +6,7 @@
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다. 해당 프로젝트는 햄버거 자동 쌓기 시스템을 구현하기 위해 수행되었으며, Indy10과 ROS 시스템을 기반으로 하여 수행되었습니다.
 
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" />
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
   <p style="margin-top: 10px;">Fig 1. Overview of ROS Hamburger System</p>
 </div>
 
@@ -23,7 +23,7 @@
 - Stand Light
 
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" />
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" /><br>
   <p style="margin-top: 10px;">Fig 2. 3D Schematic of ROS Hamburger System</p>
 </div>
 
@@ -45,7 +45,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 
 이번 프로젝트에서는 햄버거의 각 재료를 자동으로 Indy10 로봇 앞으로 옮겨놓기 위해서 아두이노를 통해 컨베이어 벨트를 작동시켰습니다. 특히, 초음파 센서를 통해 재료가 로봇팔 앞에 도착했는지 여부에 따라 컨베이어 벨트의 작동을 구분지었고, 추가적으로 스태퍼 모터를 통해 뒤집개가 재료를 잘 옮길 수 있도록 칸막이를 설치하였습니다. 해당 Conveyor Belt 시스템은 총 컨베이어 벨트를 위한 스태퍼 모터1, 칸막이를 위한 스태퍼 모터2, 초음파 센서, 그리고 해당 센서들을 통합 작동시키기 위한 Arduino Uno R3 보드가 사용되었습니다. 각 센서들은 다음과 같이 연결하여 구동시키면 됩니다.
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/ConveyorBelt_Circuit.png" />
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/ConveyorBelt_Circuit.png" /><br>
   <p style="margin-top: 10px;">Fig 3. ConveyorBelt_Circuit</p>
 </div>
 
