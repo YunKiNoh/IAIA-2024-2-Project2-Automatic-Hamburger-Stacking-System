@@ -5,13 +5,9 @@
 
 **Date**: 2024.12.24
 
-**Youtube(Demo):** https://youtu.be/UsQ8xB651xo
+**Demo Video:** https://youtu.be/UsQ8xB651xo
 
-**Youtube(Origin):** https://youtu.be/99DSSQbniwo?si=2f9L64BYM88VVH6n
-
-**Instagram:** https://www.instagram.com/reel/DDggm7aThcx/?utm_source=ig_web_copy_link
-
-**Python Source Link:** https://github.com/JinGaram/AIAI
+**Demo Cilp:** https://www.instagram.com/reel/DDggm7aThcx/?utm_source=ig_web_copy_link
 
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다. 해당 프로젝트는 햄버거 자동 쌓기 시스템을 구현하기 위해 수행되었으며, Indy10과 ROS 시스템을 기반으로 하여 수행되었습니다.
 
