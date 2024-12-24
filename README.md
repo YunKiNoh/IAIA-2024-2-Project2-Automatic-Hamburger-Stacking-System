@@ -13,12 +13,23 @@
 </div>
 
 
-Indy 10 로봇을 중심으로 하여, 관찰자 시점에서 왼쪽에는 아두이노 시스템, 오른쪽에는 패티 인식 시스템이 위차하고, 앞쪽에는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 
+Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 아두이노 시스템이, 오른쪽에는 이미지 프로세싱을 통한 패티 인식 시스템이 위치하고, 앞쪽의 왼쪽 부분에서는 OCR을 통한 메뉴 인식 시스템이 위치합니다. 추가적으로 전면 중앙에서 햄버거의 각 재료가 쌓이며, 햄버거가 완성되면 종을 울린 뒤에 Indy10은 대기 상태로 되돌아갑니다.
 
 ## Software
-본 프로젝트는 우분투 환경을 기반으로, ROS Python, OCR(Optimal Character Recognition), Arduino를 활용하였습니다.
+본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였습니다.
 
 ### ROS Python Code
+우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
+**Python Source Link:** [링크 변경]
+- 7가지 파이썬 코드들
+`catkin_ws/src/indy_driver/src`
+`camera.py`
+`image_display.py`
+`image_processing.py`
+`test_ocr_video.py`
+`image_display_ocr.py`
+`ham_classifier.py`
+`test_motion.py`
 
 ### OCR DeepLearning 
 
