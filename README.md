@@ -49,6 +49,16 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
   <p style="margin-top: 10px;">Fig 3. ConveyorBelt_Circuit</p>
 </div>
 
+### 1.4. Gripper Setting
+
+본 프로젝트에서는 Indy10 로봇이 재료를 집어갈 수 있도록 Gipper에 대한 여러가지 설계 시도가 있었으나, 최종적으로 가장 단순한 방식인 뒤집개 형태를 채택하였습니다. 이는 뒤집는 용도를 위한 것이 아니라 재료를 들어올리고 내려놓기 위함입니다.
+<div align="center">
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper3.jpg" /><br>
+  <p style="margin-top: 10px;">Fig 4. Final Version of Gripper</p>
+</div>
+
+[stl file: ]
+
 ## 2. Software Setting
 
 ### 2.1. Overall Software Environment
@@ -62,15 +72,6 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 - 아두이노: Arduino 1.8.13
 
 - 딥러닝: OCR Deeplearning Model
-
-### 1.4. Gripper Setting
-
-본 프로젝트에서는 Indy10 로봇이 재료를 집어갈 수 있도록 Gipper에 대한 여러가지 설계 시도가 있었으나, 최종적으로 가장 단순한 방식인 뒤집개 형태를 채택하였습니다. 이는 뒤집는 용도를 위한 것이 아니라 재료를 들어올리고 내려놓기 위함입니다.
-<div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper3.jpg" /><br>
-  <p style="margin-top: 10px;">Fig 4. Final Version of Gripper</p>
-</div>
-
 
 ### 2.2. Check ROS Python Code
 
