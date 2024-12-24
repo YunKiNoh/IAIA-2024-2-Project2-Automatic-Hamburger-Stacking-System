@@ -169,3 +169,17 @@ if __name__ == "__main__":
     camera = cameranode()
     camera.main()
 ```
+
+만약 에러가 발생할 경우 아래와 같이 시도해보도록 합니다.
+- Python Version: 우분투와 윈도우에서 사용하는 Python 버전이 동일한지 확인
+```
+python3 --version
+```
+- Library Version: 설치된 패키지 버전이 다른 경우 문제가 발생할 수 있습니다.
+```
+pip freeze > requirements.txt
+```
+
+```
+pip freeze > requirements.txt
+```
