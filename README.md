@@ -26,7 +26,7 @@ Indy 10 로봇을 중심으로 하여, 왼쪽에는 재료를 옮기기 위한 �
 roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
 ```
 
-### 1.2. Arduino Setting
+### 1.2. Conveyor Belt Setting
 
 이번 프로젝트에서는 햄버거의 각 재료를 자동으로 Indy10 로봇 앞으로 옮겨놓기 위해서 아두이노를 통해 컨베이어 벨트를 작동시켰습니다. 특히, 초음파 센서를 통해 재료가 로봇팔 앞에 도착했는지 여부에 따라 컨베이어 벨트의 작동을 구분지었고, 추가적으로 스태퍼 모터를 통해 뒤집개가 재료를 잘 옮길 수 있도록 칸막이를 설치하였습니다.
 <div align="center">
