@@ -70,7 +70,6 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 - 
 ```
 roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
-
 ```
 
 이것으로 로봇과의 연결을 완료하였습니다.
