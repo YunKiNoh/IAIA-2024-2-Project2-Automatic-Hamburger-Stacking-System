@@ -63,7 +63,6 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
   <p style="margin-top: 10px;">Fig 4. Final Version of Gripper</p>
 </div>
 
-[stl file: ]
 
 ## 2. Software Setting
 
