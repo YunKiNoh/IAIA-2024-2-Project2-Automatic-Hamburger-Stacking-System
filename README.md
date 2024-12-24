@@ -183,3 +183,102 @@ pip freeze > requirements.txt
 ```
 pip install -r requirements.txt
 ```
+
+## 3. Execute System
+이처럼, 하드웨어와 소프트웨어 환경 준비가 완료되면 미리 제공된 7개의 Python 코드들을 실행시켜 햄버거를 자동으로 쌓는 기능을 수행할 수 있습니다. 다음과 같이 각각의 터미널을 통해서 각각의 과정을 차례대로 수행합니다.
+- Terminal 1
+
+```
+roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.168.0.9
+```
+
+​로봇 시스템을 구축하려면 Indy 10과 서버 간 연결이 필요합니다. 두 장치 모두 동일한 Wi-Fi 네트워크를 사용해야 하며, 이 예제에서는 IP 주소 192.168.0.9를 사용했습니다. Ubuntu 터미널을 통해 연결한 후, 로봇 팔을 제어할 수 있습니다.
+
+
+
+- Terminal 2 
+
+```
+rosrun indy_driver camera.py
+```
+
+publish: `camera/image_raw2`
+
+​이 노드는 카메라 센서에서 이미지 데이터를 생성합니다. 카메라는 패티 위에 설치되어 이미지 처리를 수행합니다.
+
+
+
+- Terminal 3
+
+```
+rosrun indy_driver image_display.py
+```
+
+subscribe: `camera/image_raw2`
+
+​이 노드는 패티 위에 설치된 카메라에서 데이터를 구독하여 이미지를 윈도우에 표시해 사용자에게 보여줍니다.
+
+
+
+- Terminal 4
+
+```
+rosrun indy_driver image_processing.py
+```
+
+publish: `image_processing/object_info`
+
+subscribe: `camera/image_raw2`, `ham_classifier/ham_info`,  `RobotState_info`
+
+​이 노드는 시스템에서 가장 중요한 노드로 볼 수 있습니다. 이 노드는 먼저 패티를 촬영하는 카메라 데이터를 구독합니다. 또한 로봇 상태(Robot State)에 대한 정보를 구독하며, 사용자 주문 정보를 위한 카메라 입력도 구독합니다. 이 세 가지 데이터를 활용해 하나의 정보를 출력합니다.
+알고리즘은 로봇 상태가 0일 때만 작동하며, 로봇이 동작 중일 때는 데이터 처리를 중단합니다. 또한, 첫 번째 카메라에서 얻은 햄버거 정보와 두 번째 카메라에서 얻은 정보가 일치하면`object_info`를 다음 노드로 출력합니다. 정보가 일치하지 않을 경우 데이터를 출력하지 않습니다.
+패티 위에 설치된 카메라를 통해 정보를 가져오는 과정에서 이미지 처리를 수행합니다. 이 노드는 세 종류의 햄버거 패티에 대한 BGR 이미지를 처리하며, 관심 영역(ROI) 내에서 이미지 처리를 집중적으로 수행합니다.
+
+
+
+- Terminal 5
+
+```
+rosrun indy_driver test_ocr_video.py
+```
+
+publish: `camera/image_raw`
+
+이 노드는 카메라 센서에서 이미지 데이터를 생성합니다. 사용자의 주문 정보를 캡처하기 위해 주문 스테이션 위에 설치된 카메라를 사용합니다. 정보를 수신한 후 OCR(광학 문자 인식)을 시도합니다. OCR 딥러닝 모델은 Google API에서 제공하는 모델을 활용하며, JSON 파일을 통해 Google Cloud와 통합하여 시스템을 연결합니다.
+
+
+
+- Terminal 6
+
+```
+rosrun indy_driver image_display_ocr.py
+```
+
+subscribe: `camera/image_raw2`
+
+이 노드는 주문 스테이션 위에 설치된 카메라에서 데이터를 구독하고, 이미지를 윈도우에 표시하여 사용자에게 보여줍니다.
+
+
+- Terminal 7
+
+```
+rosrun indy_driver ham_classifier.py
+```
+
+publish: `ham_classifier/ham_info`
+
+subscribe: `camera/image_raw`, `Robot State_info`
+
+이 노드는 OCR 카메라에서의 텍스트 입력 데이터와 RobotState_info 데이터를 구독합니다. 알고리즘은 로봇이 동작 중일 때 실행되지 않습니다. 로봇이 정지 상태일 때, 카메라가 특정 햄버거 유형을 15초 이상 감지하면 해당 정보를 다음 노드로 출력합니다.
+
+
+
+- Terminal 8 
+
+```
+rosrun indy_driver test_motion.py
+```
+
+subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
+
+이 마지막 노드는 두 가지 정보를 수신한 후 알고리즘을 실행합니다. 알고리즘은 각 햄버거 유형에 대한 특정 절차를 포함하며, `Image_processing`에서 받은 정보를 기반으로 패티의 위치를 계산합니다. 이 과정에서 패티의 상관 관계식을 사용하여 위치를 결정합니다. 햄버거 제작 과정이 완료되면 알고리즘이 종료되고, 로봇은 대기 위치로 돌아가 정지합니다.
