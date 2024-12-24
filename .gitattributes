@@ -1,2 +1,0 @@
-cd[[:space:]]/c/Users/NohYunKi/IAIA_Project2/* filter=lfs diff=lfs merge=lfs -text
-IAIA_Project2/** filter=lfs diff=lfs merge=lfs -text
