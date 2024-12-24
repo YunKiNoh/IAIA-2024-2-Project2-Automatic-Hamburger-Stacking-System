@@ -131,9 +131,7 @@ sudo chown 사용자이름 arduino
 [Link: https://blog.naver.com/rhrkdfus/221335351270]
 
 #### 2.3.2. Create json file
-그 후에는 API 시스템에서 json file을 생성할 수 있는데, 예시 결과는 다음 링크를 통해 확인할 수 있습니다.
-
-[Link: https://github.com/JinGaram/AIAI/blob/main/clever-obelisk-441505-v9-02af9e940897.json]
+그 후에는 API 시스템에서 json file을 생성합니다.
 
 #### 2.3.3. Install some file in the ubuntu command prompot
 이후에 Ubuntu OS 터미널 창에서 아래를 설치합니다.
