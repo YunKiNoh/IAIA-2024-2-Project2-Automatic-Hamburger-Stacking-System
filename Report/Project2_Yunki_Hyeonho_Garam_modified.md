@@ -313,8 +313,10 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 ##### 			2.2.3.1 Gripper
 
+
+
 <div align="center">
-  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper1.png" /><br>
+  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripperione.png" /><br>
   <p style="margin-top: 10px;">Fig 4. Gripper Design</p>
 </div>
 		
@@ -349,9 +351,13 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 ##### 2.2.3.3 Turner
 
-<img src="https://github.com/user-attachments/assets/3835b320-cbc9-42ce-b31e-6781dc509b93" alt="gripper3" style="zoom:150%;" />
 
-<center><strong>Fig 6. Turner Design</center>		
+<div align="center">
+  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper3.png" /><br>
+  <p style="margin-top: 10px;">Fig 6. Turner Design</p>
+</div>
+		
+
 
 ​	To address the issues identified in Figures 4 and 5, we newly designed a spatula-type hardware system as shown in Figure 6. This hardware was designed to efficiently transport materials, aiming to facilitate the movement and placement of materials. However, in the initial design, an issue arose where materials moved unintentionally when being transferred or placed. This highlighted the need for a guard device to securely maintain the position of the materials.
 
@@ -371,9 +377,11 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 #### 2.2.4. **Conveyor Belt System**
 
-![ConveyorBelt_Circuit](ConveyorBelt_Circuit.png)
-
-<center><strong>Fig 8. Design of a Conveyor Belt Using Arduino [1] </center>		
+<div align="center">
+  <img width="940" alt="ConveyorBelt_Circuit" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/ConveyorBelt_Circuit.png" /><br>
+  <p style="margin-top: 10px;">Fig 8. Design of a Conveyor Belt Using Arduino [1]</p>
+</div>
+	
 
 ​	To carry each ingredient in front of the Indy 10 robot arm after this robot pick up each ingredient, we used the conveyor belt with ultrasonic. If there are not any ingredients in front of the ultrasonic sensor, the flag for running conveyor belt is turned on, and this conveyor belt will start to work. At the same time, because each ingredient need to be carried on the conveyor belt, the pence would be opened. However, if there are any ingredients in front of the ultrasonic sensor, the flat for running the conveyor belt is turned off, and this conveyor belt stops working. At this moment, to help to pick up each ingredients on the flipper, the pence would be closed. By repeating this carrying and pence system of Arduino, each ingredient can be carried in front of the robot arm automatically.
 
