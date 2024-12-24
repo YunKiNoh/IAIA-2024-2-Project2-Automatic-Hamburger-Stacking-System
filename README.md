@@ -1,4 +1,4 @@
-# Project2: Robot Operating System for Making Hamburger Modelwith Deep Learning
+# Project2: Robot Operating System for Making Hamburger Model with Deep Learning
 
 Author: 21800226 Yunki Noh / 21900727 Garam Jin / 21900258 Hyeonho Moon 
 Date: 2024.12.20
