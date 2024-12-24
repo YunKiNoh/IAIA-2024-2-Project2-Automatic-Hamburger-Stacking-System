@@ -30,7 +30,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 
 이번 프로젝트에서는 햄버거의 각 재료를 자동으로 Indy10 로봇 앞으로 옮겨놓기 위해서 아두이노를 통해 컨베이어 벨트를 작동시켰습니다. 특히, 초음파 센서를 통해 재료가 로봇팔 앞에 도착했는지 여부에 따라 컨베이어 벨트의 작동을 구분지었고, 추가적으로 스태퍼 모터를 통해 뒤집개가 재료를 잘 옮길 수 있도록 칸막이를 설치하였습니다.
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/ConveyorBelt_Circuit.pngg" />
+  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/ConveyorBelt_Circuit.png" />
   <p style="margin-top: 10px;">Fig 2. ConveyorBelt_Circuit.</p>
 </div>
 
