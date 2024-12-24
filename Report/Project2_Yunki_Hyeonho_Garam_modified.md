@@ -38,7 +38,7 @@
 
 
 <div align="center">
-  <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
+  <img width="940" alt="ROS System Set-Up Environment" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
   <p style="margin-top: 10px;">Fig 2. ROS System Set-Up Environment</p>
 </div>
 
@@ -299,7 +299,7 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 <div align="center">
   <img width="940" alt="Diagram of ROS Process" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/Node.png" /><br>
-  <p style="margin-top: 10px;">Fig 2. ROS System Set-Up Environment</p>
+  <p style="margin-top: 10px;">Fig 3. Diagram of ROS Process</p>
 </div>
 	
 
@@ -314,7 +314,7 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 ##### 			2.2.3.1 Gripper
 
 <div align="center">
-  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper1" /><br>
+  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper1.png" /><br>
   <p style="margin-top: 10px;">Fig 4. Gripper Design</p>
 </div>
 		
