@@ -5,7 +5,7 @@
 
 본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다.
 
-## 1. Hardware
+## 1. Hardware Setting
 ### 1.1. Overall Hardware Setting
 본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다.
 <div align="center">
@@ -35,7 +35,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
   <p style="margin-top: 10px;">Fig 2. ConveyorBelt_Circuit.</p>
 </div>
 
-## 2. Software
+## 2. Software Setting
 ### 2.1. Overall Software Environment
 본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였는데, 가장 기본이 되는 프로그램의 종류와 버전은 다음과 같습니다.
 - 우분투: Ubuntu 20.04
@@ -47,7 +47,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 - 딥러닝: OCR Deeplearning Model
 
 
-### 2.2. ROS Python Code
+### 2.2. Check ROS Python Code
 
 우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
 - Python Source Link: [링크 변경]
@@ -61,7 +61,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 6. `ham_classifier.py`<br>
 7. `test_motion.py`<br>
 
-### 2.3. 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
+### 2.3. Install 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
 이번 프로젝트는 Ubuntu 20.04에서 이루어졌기 때문에, 해당 버전에 출시되었던 Arduino IDE 1.8.13을 설치하였습니다.
 
 #### 2.3.1. Download 'Aruidno IDE 1.8.13' for 'Ubuntu 20.04'
@@ -91,4 +91,81 @@ $ cd arduino-1.8.13
 ```
 ```
 sudo chown 사용자이름 arduino
+```
+
+### 2.3. Setting for OCR Utilization
+본 프로젝트에서는 주문표를 인식하기 위하여 OCR(Optical character recognition) DeepLearning Model을 사용하였습니다. 이 모델을 사용하기 위해서는 다음과 같이 몇가지 과정을 거쳐야 합니다.
+#### 2.3.1. Create google key for use of google API
+다음 사이트에 들어가서 구글 API를 사용하기 위한 키를 생성합니다.
+
+[Link: https://blog.naver.com/rhrkdfus/221335351270]
+
+#### 2.3.2. Create json file
+그 후에는 API 시스템에서 json file을 생성할 수 있는데, 예시 결과는 다음 링크를 통해 확인할 수 있습니다.
+
+[Link: https://github.com/JinGaram/AIAI/blob/main/clever-obelisk-441505-v9-02af9e940897.json]
+
+#### 2.3.3. Install some file in the ubuntu command prompot
+이후에 Ubuntu OS 터미널 창에서 아래를 설치합니다.
+
+```
+pip install --upgrade google-api-python-client
+```
+```
+pip install --upgrade google-cloud-vision
+```
+
+#### 2.3.4. 
+JSON 계정 키가 정상적으로 다운로드 되었다면 다음과 같이 json 파일을 시스템 변수로 등록해줘야 합니다.
+```
+setx GOOGLE_APPLICATION_CREDENTIALS (json 파일 위치)\(json 파일 이름).json
+```
+
+#### 2.3.5. Using OCR Model
+이상으로 Google OCR 연결은 완료 되었다. 다음과 같이 OCR을 사용할 수 있습니다.
+```
+#!/usr/bin/env python3
+#-*- coding:utf-8 -*-
+
+import cv2
+from google.cloud import vision
+import rospy
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+
+class cameranode:
+
+    def __init__(self):
+        rospy.init_node('camera_node', anonymous=True)  # 노드 이름 "camera_node"로 초기화
+        self.bridge = CvBridge()                # cv_bridge 객체 생성
+
+        # Get camera number from ROS parameter, default to 0
+        camera_number = rospy.get_param('~camera_number', 2)
+        rospy.loginfo(f"Camera number received: {camera_number}")
+
+        # "camera/image_raw"라는 토픽으로 메시지를 publish할 publisher 객체 생성
+        self.image_pub = rospy.Publisher("camera/image_raw",Image,queue_size=1)    
+        
+        # self.cap = cv2.VideoCapture(camera_number)          # 카메라 연결을 위한 VideoCapture 객체 생성
+        self.cap = cv2.VideoCapture(2)
+
+
+    def main(self):
+        # OpenCV를 통해 카메라 접근
+        rate = rospy.Rate(30)                           # 루프 실행 주기 : 30hz
+        while not rospy.is_shutdown():                  # ROS가 종료되지 않은 동안
+            ret, frame = self.cap.read()                # 카메라로부터 이미지를 읽음
+            if ret:                                     # 이미지가 정상적으로 읽혀진 경우
+                try:
+                    # 읽어들인 이미지를 ROS Image 메시지로 변환하여 토픽으로 publish
+                    #self.detect_text_from_frame(frame)
+                    self.image_pub.publish(self.bridge.cv2_to_imgmsg(frame, "bgr8"))
+                
+                except CvBridgeError as e:
+                    print(e)                            # CvBridge 변환 예외 처리
+            rate.sleep()                                # 지정된 루프 실행 주기에 따라 대기
+
+if __name__ == "__main__":
+    camera = cameranode()
+    camera.main()
 ```
