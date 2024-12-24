@@ -337,9 +337,14 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 
 
-![gripper2](https://github.com/user-attachments/assets/0d0640e4-155c-48af-949b-70af4de0118c)
+<div align="center">
+  <img width="940" alt="gripper2" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper2.png" /><br>
+  <p style="margin-top: 10px;">Fig 5. Slider Design</p>
+</div>
 
-<center><strong>Fig 5. Slider Design</center>		
+
+
+  
 
 ​	To address the first issue, the previously used gripper was removed, and a new hardware system in the form of a slider, resembling the one shown in the figure 5, was designed by combining a  stepper motor and a motor driver (MSD-224). This hardware was designed to provide flexibility in handling and placing materials regardless of their size or shape. Specifically, the slider system focused on ensuring stable movement of materials and was constructed as an improved structure to overcome the limitations of the previous system.
 
