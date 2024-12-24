@@ -372,11 +372,16 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 
 
-​                 ![motor](https://github.com/user-attachments/assets/af257718-68b3-4bda-ba54-3a034fe94737)![tray](https://github.com/user-attachments/assets/3d54597d-79a8-4589-ae59-53f0d9ce419c)![gril](https://github.com/user-attachments/assets/ca25ab70-6f13-4049-ae27-ecb88892d8b0)
 
-​                 (a) Fence on the Conveyor Belt                (b) Fence on the Pick up Place	 			(c)  Fence on the Grill		
 
-<center><strong>Fig 7. Blocking the ingredients</center>		
+<div align="center">
+  <img width="940" alt="fence" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/fence.jpg" /><br>
+  <p style="margin-top: 10px;">Fig 7. Blocking the ingredients</p>
+</div>
+​                 
+
+
+
 
 
 
