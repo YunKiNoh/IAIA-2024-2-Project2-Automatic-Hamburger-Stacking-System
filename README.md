@@ -7,7 +7,7 @@
 
 ## 1. Hardware Setting
 ### 1.1. Overall Hardware Setting
-본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다. 사용되어진 하드웨어에 대한 정보는 다음과 같습니다.
+본 프로젝트는 크게 네가지 시스템으로 나뉩니다. 첫번째는 Indy10 로봇팔 구동 시스템, 두번째는 OCR을 통한 메뉴 인식 시스템, 세번째는 Arduino 재료 운반 시스템, 마지막으로 Stand Light 환경 속에서 이루어지는 패티 종류 인식 시스템입니다. 이를 위해 사용된 하드웨어들은 다음과 같습니다.
 - Robot: Indy10
 - Camera1: USB camera1
 - Camera2: USB camera2
@@ -16,6 +16,7 @@
 - Ultrasonic Sensor
 - Two Power Supplies
 - Stand Light
+
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/3D_Schemetic.png" />
   <p style="margin-top: 10px;">Fig 1. 3D Schematic of ROS Hamburger System.</p>
@@ -44,8 +45,11 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 </div>
 
 ## 2. Software Setting
+
 ### 2.1. Overall Software Environment
+
 본 프로젝트는 우분투 환경을 기반으로 하여 ROS Python, OCR(Optimal Character Recognition) Deeplearning, 그리고 Arduino를 활용하였는데, 가장 기본이 되는 프로그램의 종류와 버전은 다음과 같습니다.
+
 - 우분투: Ubuntu 20.04
 
 - 파이썬: Python 3.8
@@ -58,8 +62,11 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 ### 2.2. Check ROS Python Code
 
 우선 Indy10 로봇은 ROS 환경을 기반으로 파이썬 코드를 통해 데이터를 주고 받으며 동작을 수행합니다. 특히, 이번 프로젝트를 위해서는 총 7개의 파이썬 코드를 구축 및 실행하였습니다.
+
 - Python Source Link: [링크 변경]
+
 - 7가지 파이썬 코드들
+
 0. `catkin_ws/src/indy_driver/src`: 파일 위치로 이동<br>
 1. `camera.py`: OCR 수행을 위한 카메라 코드<br>
 2. `image_display.py`:<br>
