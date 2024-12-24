@@ -35,6 +35,8 @@
 
 ​	In this system, three types of burger would be stacked automatically: Bulgogi Burger, Cheese Burger, and Shrimp Burger. To recognize the types of burger, we used OCR(Optimal Character Recognition) deep learning model. If someone want to order Bulgogi Burger, they need to pick down the OCR text card of 'Bulgogi Burger' under the camera 1. After 15 seconds of detecting 'Bulgogi Burger' from OCR model, Indy 10 start to pick up each ingredients (bread, bulgogi patty, Lettuce, tomato, bread) and stack up on the pick up table. After finishing stacking overall ingredients of hamburger, this robot would ring the bell.
 
+
+
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
   <p style="margin-top: 10px;">Fig 2. ROS System Set-Up Environment</p>
@@ -311,9 +313,11 @@ subscribe: `ham_classifier/ham_info`, `image_processing/object_info`
 
 ##### 			2.2.3.1 Gripper
 
-<img src="https://github.com/user-attachments/assets/bc2e7ef7-b879-4011-87bc-13b353032122" alt="gripper1" style="zoom: 25%;" />
-
-<center><strong>Fig 4. Gripper Design</center>		
+<div align="center">
+  <img width="940" alt="gripper3" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/gripper1" /><br>
+  <p style="margin-top: 10px;">Fig 4. Gripper Design</p>
+</div>
+		
 
 
 
