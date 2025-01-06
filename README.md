@@ -9,7 +9,7 @@
 
 **Demo Cilp:** https://www.instagram.com/reel/DDggm7aThcx/?utm_source=ig_web_copy_link
 
-본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다. 해당 프로젝트는 햄버거 자동 쌓기 시스템을 구현하기 위해 수행되었으며, Indy10과 ROS 시스템을 기반으로 하여 수행되었습니다.
+본 레포지토리는 Industrial AI and Automation의 Project2[Automatic Hamburger Stacking System with Indy 10]의 수행을 돕기 위해 제작한 가이드라인 자료입니다. 해당 프로젝트는 햄버거 자동 쌓기 시스템을 구현하기 위해 수행되었으며, Indy10과 ROS 시스템을 기반으로 수행되었습니다.
 
 <div align="center">
   <img width="940" alt="3D_Schemetic" src="https://github.com/YunKiNoh/24-2_IAIA_Project2-Automatic-Hamburger-Stacking-System/blob/main/image/overview.jpg" /><br>
